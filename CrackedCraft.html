@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>CrackedCraft Launcher</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111'/%3E%3Cpath d='M2 5l6-3 6 3-6 3z' fill='%235dbb3f'/%3E%3Cpath d='M2 5v6l6 3V8z' fill='%2379553a'/%3E%3Cpath d='M14 5v6l-6 3V8z' fill='%235e422c'/%3E%3C/svg%3E">
+    <style>
+        @font-face {
+            font-family: 'MC';
+            src: url(data:font/woff2;base64,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) format('woff2');
+            font-display: swap
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        :root {
+            --grass: #5dbb3f;
+            --grass-d: #3c8527;
+            --xp: #7fe817;
+            --gold: #fcdb5e;
+            --red: #e8433f;
+            --purp: #b46fe8;
+            --slot: #8b8b8b;
+            --dim: #a8b0a0;
+            --dirt: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADBElEQVR42h2T11biYBRG81KU6KDSO4ioFENAEAj1GiK9Q0iQ0ffdc5wL1soF/zlf2UexGknWH1EuhTR/NT/n3gNLPcmsm+C74mXbj7MZejgYCdZDP5teiutbglH/AesliDIvZPjWEjjNIFY5w6zh4VyPceq6Matxfppu7Kc4s6KXZTHIpRdl9ZTB0gKcen9Qjvk0x06c5SDHrHnDoR5mKtvHnRBOJ8pu6OJaD3HsxrlUUhxlwLnswzRUxsMblFXfw6wW4W85x7ihsq3EcIZutm8pJvk4u4ofs/iA3Y6LQrFWVNnrMbYNH9NSEuXXt1XM8NUMMDVCWEacVd7FsXnLuXrHV+OeL/2RdemOn1qUTcvPpJll0U0x17MoznMQ5+kes+9jX89i6SJtEOaky4CaF1sejt8zOKLiqPk4vUi4bZVDN4rdcqOcGyGWTyqTmofvVgrrXYLquJj2bkVimrn8yWll2NWSXPUEy+49IyPAuhfnsycZmIaLZUumFm+wJWmzEOGsR7FKkkn1D3YvwGoQYfeeYvbswRzEsV8fWHz4GUkbil1yc2x4ZbufRT3C8jXJaPAoIYZYS0O25pJ8pNJuhnE/LZsDWFU/+4KLffsRZVr0sJXfsRXmKpK2stmSZuZ1+X4KcGikWb4kOWuShZFjX8kKB+n/8K2MW5TPYUQ8udkYYTb5DBuBZtyWmjpBTC3GQQA71m8xpQF7IA87D4xfVT5LAlNVMpgUE8KASNI8rKW6aT/Gz7uPayOD2ZZmyiqXlzSzYY6JkWT6+kumm7kg//kmCuznFIeqbJJQLrpAJTYc4dwpJjm03VxKgrCwsNRyLPM+tto9zrMgLtZO5QjKIp9jNcyKrAD7YUiOSbwVYmzqcjBS7amYw2nIcNn2i7TdFHsfws6HykZPoWwKHhaayqIVZSE5LF68WAWVdTvApO7l/CrZGIJyVbLq3mHKo00zzK7r4jMflWvsqswNj9CYYix1neQSRx9JudD0f2RXQqJl3LF6E1W9tCR/IzcT41uXU5c6/wGEvShMRXRncgAAAABJRU5ErkJggg==);
+            --stone: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWUlEQVR42hWTRxbEMAxCc2l32XIvp2aYXV7c4IM+GQ9ODFZsyPdA80B0Bvtl6DB45UDWRPMV1gjWzTijYMQFowNfuxvHCt582HEi80CcG6VtjLOxeocNCn8b1G+IVOT4MIT/ZsHnnsX2CZIW+nno3sIEwTEVey5cm+CWYvGSvalqD2Q/ULjPpowvuwAJEX4FVMp2vD2vjtwNOjfMkin/Yq+MqAtLJ0bgOq2fsPCVavHOhU6HvC9CKYi50c6DUq7yn6kD8hb0TZwuCH8bKaDsSQY2E5TCEIp6hX0BjpvTTNi1IwrtmcPviDPpu3ic0mAH1XWlAgmUedGXwdCOVieeI0w/oYvkZZDLwvOOIBNmG1SmfN1RteC7xiAwonT+3iteXmg70EKGkY5dDNzskLrxdufhDU2OygiVqXy+O4RI6UkIrcHLPyoyqYW+qcJZuD5o68Esz0sq4hvYgyD5+JdUoNdgMrp/IuVPuE9Uw4tZMGkWQjU7cv3Phcx0Tph70QYZ+Fzo2aEQyssPtiWslGA9y8Xcc1bExBcn4QYPTzV2N7jKJnbLFI5FExZIH1beyJowbMQ6gVW+EOvo9cDGgKYblTbuH2y/bGvEJ8rsa0YqCRqY/WOFyWUxvr+C2LhWmX1P6K4jsUBxsK3m4lL193pAFmasga8ynlswb0XNBpfNvJSaJzeHi9QCAuN74iHKwesHX41cYFSFKqatEMdhIpcgGSVxUjlQrlikTukEunjJ36JlG2NiCqMw87UYDenv/4RFzEUG4aBqhckETEue2Xe+6shhEerjQK2m+AEHMnx+cAO3OQAAAABJRU5ErkJggg==)
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden
+        }
+
+        body {
+            font-family: 'MC', monospace;
+            color: #fff;
+            background: #000;
+            user-select: none;
+            font-size: 12px;
+            line-height: 1.6
+        }
+
+        img {
+            image-rendering: pixelated
+        }
+
+        ::-webkit-scrollbar {
+            width: 14px;
+            height: 14px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+            border: 2px solid #1d1d1d
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--slot);
+            border: 2px solid #000;
+            box-shadow: inset 2px 2px 0 #c6c6c6, inset -2px -2px 0 #555
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a5a5a5
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: #000
+        }
+
+        #panorama {
+            position: fixed;
+            inset: -60px;
+            z-index: 0;
+            background: var(--dirt);
+            background-size: 96px 96px;
+            image-rendering: pixelated;
+            filter: brightness(.42) blur(2px);
+            animation: pan 90s linear infinite
+        }
+
+        @keyframes pan {
+            from {
+                transform: translateX(0) scale(1.08)
+            }
+
+            50% {
+                transform: translateX(-96px) scale(1.12)
+            }
+
+            to {
+                transform: translateX(0) scale(1.08)
+            }
+        }
+
+        #vignette {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, .55) 100%)
+        }
+
+        .mcbtn {
+            font-family: 'MC', monospace;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #fff;
+            text-shadow: 2px 2px 0 #3f3f3f;
+            background: var(--stone);
+            background-size: 48px 48px;
+            image-rendering: pixelated;
+            border: 2px solid #000;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 12px;
+            box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .45), inset -2px -2px 0 rgba(0, 0, 0, .55)
+        }
+
+        .mcbtn:hover:not(:disabled) {
+            color: #ffffa0;
+            box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .65), inset -2px -2px 0 rgba(0, 0, 0, .55), 0 0 0 2px #fff
+        }
+
+        .mcbtn:active:not(:disabled) {
+            box-shadow: inset -2px -2px 0 rgba(255, 255, 255, .25), inset 2px 2px 0 rgba(0, 0, 0, .55);
+            transform: translateY(1px)
+        }
+
+        .mcbtn.green {
+            background-image: linear-gradient(rgba(60, 133, 39, .82), rgba(60, 133, 39, .82)), var(--stone)
+        }
+
+        .mcbtn.red {
+            background-image: linear-gradient(rgba(160, 40, 40, .82), rgba(160, 40, 40, .82)), var(--stone)
+        }
+
+        .mcbtn.blue {
+            background-image: linear-gradient(rgba(45, 105, 170, .82), rgba(45, 105, 170, .82)), var(--stone)
+        }
+
+        .mcbtn.gold {
+            background-image: linear-gradient(rgba(170, 130, 25, .85), rgba(170, 130, 25, .85)), var(--stone)
+        }
+
+        .mcbtn.sm {
+            padding: 6px 10px;
+            font-size: 10px
+        }
+
+        .mcbtn:disabled {
+            opacity: .45;
+            cursor: not-allowed;
+            color: #a0a0a0
+        }
+
+        .mcinput {
+            font-family: 'MC', monospace;
+            background: #000;
+            border: 2px solid #a0a0a0;
+            color: #e0e0e0;
+            padding: 10px;
+            font-size: 11px;
+            width: 100%;
+            outline: none;
+            box-shadow: inset 2px 2px 0 #1a1a1a
+        }
+
+        .mcinput:focus {
+            border-color: #fff
+        }
+
+        select.mcinput {
+            cursor: pointer
+        }
+
+        label {
+            font-size: 9px;
+            color: var(--dim);
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        .panel {
+            background: rgba(12, 14, 10, .86);
+            border: 2px solid #000;
+            box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .14), inset -2px -2px 0 rgba(0, 0, 0, .7), 0 6px 0 rgba(0, 0, 0, .35);
+            padding: 16px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(3px)
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            color: var(--gold);
+            text-shadow: 2px 2px 0 #3f3000;
+            margin-bottom: 12px
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        .grow {
+            flex: 1;
+            min-width: 170px
+        }
+
+        #app {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            height: 100%
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .65));
+            border-bottom: 4px solid #000;
+            box-shadow: 0 2px 0 rgba(255, 255, 255, .08)
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            text-shadow: 3px 3px 0 #000;
+            letter-spacing: 1px
+        }
+
+        #logo img {
+            width: 36px;
+            height: 36px;
+            filter: drop-shadow(2px 3px 0 rgba(0, 0, 0, .6))
+        }
+
+        #logo b {
+            color: var(--grass)
+        }
+
+        nav {
+            display: flex;
+            gap: 6px;
+            margin-left: auto;
+            flex-wrap: wrap
+        }
+
+        .tab {
+            font-size: 10px;
+            padding: 8px 12px;
+            color: #cfcfcf;
+            background: rgba(0, 0, 0, .55);
+            border: 2px solid #000;
+            cursor: pointer;
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .15);
+            text-shadow: 1px 1px 0 #000
+        }
+
+        .tab:hover {
+            color: #ffffa0
+        }
+
+        .tab.on {
+            color: #fff;
+            background-image: linear-gradient(rgba(60, 133, 39, .9), rgba(60, 133, 39, .9)), var(--stone);
+            background-size: cover, 48px 48px;
+            box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .3), inset -2px -2px 0 rgba(0, 0, 0, .5)
+        }
+
+        main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 18px
+        }
+
+        .view {
+            display: none;
+            max-width: 1150px;
+            margin: 0 auto
+        }
+
+        .view.on {
+            display: block;
+            animation: viewin .18s steps(3)
+        }
+
+        @keyframes viewin {
+            from {
+                opacity: 0;
+                transform: translateY(8px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        footer {
+            padding: 6px 14px;
+            font-size: 8px;
+            color: #7d8577;
+            background: rgba(0, 0, 0, .8);
+            border-top: 3px solid #000;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        #playhero {
+            text-align: center;
+            padding: 26px 12px 10px
+        }
+
+        #mctitle {
+            font-size: clamp(22px, 5vw, 44px);
+            letter-spacing: 2px;
+            display: inline-block
+        }
+
+        #mctitle .l1 {
+            color: #dedede;
+            background: linear-gradient(#fff, #9e9e9e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(3px 3px 0 #000)
+        }
+
+        #mctitle .l2 {
+            color: var(--grass);
+            filter: drop-shadow(3px 3px 0 #000)
+        }
+
+        .splash {
+            color: #ff5;
+            font-size: 11px;
+            text-shadow: 2px 2px 0 #3f3f00;
+            transform: rotate(-8deg);
+            display: inline-block;
+            margin: 8px 0 0 120px;
+            animation: splash .9s ease-in-out infinite
+        }
+
+        @keyframes splash {
+            50% {
+                transform: rotate(-8deg) scale(1.1)
+            }
+        }
+
+        #bigplay {
+            font-size: 16px;
+            padding: 16px 40px;
+            margin-top: 24px;
+            width: min(430px, 92%)
+        }
+
+        #launchinfo {
+            margin-top: 14px;
+            color: var(--dim);
+            font-size: 9px;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        .statgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 22px
+        }
+
+        .stat {
+            background: rgba(0, 0, 0, .7);
+            border: 2px solid #000;
+            padding: 12px;
+            box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .1), inset -2px -2px 0 rgba(0, 0, 0, .6)
+        }
+
+        .stat b {
+            display: block;
+            font-size: 16px;
+            color: var(--xp);
+            text-shadow: 2px 2px 0 #1e3300
+        }
+
+        .stat span {
+            font-size: 8px;
+            color: var(--dim);
+            text-transform: uppercase
+        }
+
+        #hotbar {
+            display: flex;
+            justify-content: center;
+            margin: 18px auto 0;
+            width: max-content;
+            max-width: 100%;
+            overflow-x: auto;
+            background: rgba(0, 0, 0, .5);
+            border: 2px solid #000;
+            padding: 4px
+        }
+
+        .hslot {
+            width: 52px;
+            height: 52px;
+            flex: none;
+            background: var(--slot);
+            border: 2px solid #000;
+            box-shadow: inset 2px 2px 0 #555, inset -2px -2px 0 #c6c6c6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative
+        }
+
+        .hslot img {
+            width: 32px;
+            height: 32px
+        }
+
+        .hslot:hover {
+            box-shadow: inset 0 0 0 3px #fff
+        }
+
+        .hslot.sel {
+            box-shadow: inset 0 0 0 3px #fff, 0 0 12px rgba(255, 255, 255, .5)
+        }
+
+        .hslot .hname {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 7px;
+            color: #fff;
+            text-shadow: 1px 1px 0 #000;
+            white-space: nowrap;
+            display: none
+        }
+
+        .hslot.sel .hname {
+            display: block
+        }
+
+        .chips {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 12px
+        }
+
+        .chip {
+            padding: 6px 10px;
+            font-size: 9px;
+            background: rgba(0, 0, 0, .6);
+            border: 2px solid #000;
+            color: #aaa;
+            cursor: pointer;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        .chip:hover {
+            color: #ffffa0
+        }
+
+        .chip.on {
+            color: #fff;
+            background-image: linear-gradient(rgba(60, 133, 39, .9), rgba(60, 133, 39, .9)), var(--stone);
+            background-size: cover, 48px
+        }
+
+        .vgroup {
+            margin-bottom: 20px
+        }
+
+        .vgroup>h3 {
+            font-size: 11px;
+            color: var(--grass);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 0 #000;
+            border-bottom: 3px solid #000;
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .vgroup>h3 small {
+            color: var(--dim);
+            font-size: 9px
+        }
+
+        .vcard {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 0, 0, .66);
+            border: 2px solid #000;
+            padding: 10px 12px;
+            margin-bottom: 6px;
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1);
+            flex-wrap: wrap
+        }
+
+        .vcard:hover {
+            background: rgba(30, 42, 24, .8);
+            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .35)
+        }
+
+        .vico {
+            width: 40px;
+            height: 40px;
+            flex: none;
+            background: var(--slot);
+            border: 2px solid #000;
+            box-shadow: inset 2px 2px 0 #555, inset -2px -2px 0 #c6c6c6;
+            padding: 3px
+        }
+
+        .vmeta {
+            flex: 1;
+            min-width: 170px
+        }
+
+        .vmeta b {
+            font-size: 10px;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        .vmeta small {
+            display: block;
+            color: var(--dim);
+            font-size: 8px;
+            margin-top: 4px
+        }
+
+        .badge {
+            font-size: 7px;
+            padding: 3px 6px;
+            border: 2px solid #000;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-left: 5px;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+            vertical-align: middle
+        }
+
+        .b-wasm {
+            background: var(--purp)
+        }
+
+        .b-js {
+            background: #5a5a5a
+        }
+
+        .b-ok {
+            background: var(--grass-d)
+        }
+
+        .b-live {
+            background: #2d69aa
+        }
+
+        .b-broken {
+            background: var(--red)
+        }
+
+        .b-local {
+            background: #aa8219
+        }
+
+        .vactions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, .66);
+            border: 2px solid #000;
+            padding: 10px 12px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .1)
+        }
+
+        .item .grow b {
+            font-size: 10px
+        }
+
+        .item .grow small {
+            display: block;
+            color: var(--dim);
+            font-size: 8px;
+            margin-top: 3px
+        }
+
+        .setrow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 2px solid rgba(255, 255, 255, .08);
+            flex-wrap: wrap
+        }
+
+        .setrow:last-child {
+            border: none
+        }
+
+        .setrow .lbl b {
+            font-size: 10px
+        }
+
+        .setrow .lbl small {
+            display: block;
+            color: var(--dim);
+            font-size: 8px;
+            margin-top: 3px
+        }
+
+        .toggle {
+            width: 56px;
+            height: 28px;
+            background: #000;
+            border: 2px solid #a0a0a0;
+            cursor: pointer;
+            position: relative;
+            flex: none
+        }
+
+        .toggle::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: var(--slot);
+            box-shadow: inset 1px 1px 0 #c6c6c6, inset -1px -1px 0 #555;
+            transition: left .1s steps(2)
+        }
+
+        .toggle.on {
+            border-color: var(--xp)
+        }
+
+        .toggle.on::after {
+            left: 30px;
+            background: var(--grass);
+            box-shadow: inset 1px 1px 0 #8ee06a, inset -1px -1px 0 #2d661d
+        }
+
+        .hearts {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+            margin-top: 10px
+        }
+
+        .hearts img {
+            width: 18px;
+            height: 16px
+        }
+
+        #overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .72);
+            z-index: 50;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px
+        }
+
+        #overlay.on {
+            display: flex
+        }
+
+        #modal {
+            background: #c6c6c6;
+            border: 3px solid #000;
+            color: #3f3f3f;
+            box-shadow: inset 3px 3px 0 #fff, inset -3px -3px 0 #555, 0 14px 40px #000;
+            width: min(500px, 94vw);
+            max-height: 86vh;
+            overflow-y: auto;
+            padding: 20px
+        }
+
+        #modal h3 {
+            margin-bottom: 14px;
+            font-size: 12px;
+            color: #3f3f3f
+        }
+
+        #modal label {
+            color: #5a5a5a;
+            text-shadow: none
+        }
+
+        #modal .mrow {
+            margin-bottom: 12px
+        }
+
+        #modal .mbtns {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-top: 16px;
+            flex-wrap: wrap
+        }
+
+        #modal .item {
+            background: #8b8b8b;
+            color: #fff;
+            box-shadow: inset 2px 2px 0 #555, inset -2px -2px 0 #c6c6c6
+        }
+
+        #game {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: #000;
+            display: none;
+            flex-direction: column
+        }
+
+        #game.on {
+            display: flex
+        }
+
+        #gbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(rgba(0, 0, 0, .95), rgba(10, 14, 8, .9));
+            border-bottom: 3px solid #000;
+            padding: 6px 10px
+        }
+
+        #gbar b {
+            font-size: 9px;
+            color: var(--xp);
+            margin-right: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        #gframe {
+            flex: 1;
+            border: 0;
+            width: 100%;
+            background: #000
+        }
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: var(--dirt);
+            background-size: 64px 64px;
+            image-rendering: pixelated;
+            display: none;
+            align-items: center;
+            justify-content: center
+        }
+
+        #loader::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .6)
+        }
+
+        #loader.on {
+            display: flex
+        }
+
+        #loadbox {
+            width: min(540px, 92vw);
+            text-align: center;
+            position: relative
+        }
+
+        #loadbox h3 {
+            font-size: 14px;
+            text-shadow: 2px 2px 0 #000;
+            margin-bottom: 8px
+        }
+
+        #loadstatus {
+            color: #d0d0d0;
+            font-size: 9px;
+            margin-bottom: 16px;
+            min-height: 16px;
+            word-break: break-all;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        #pbar {
+            height: 22px;
+            background: #000;
+            border: 2px solid #a0a0a0;
+            box-shadow: inset 2px 2px 0 #1a1a1a;
+            padding: 2px
+        }
+
+        #pfill {
+            height: 100%;
+            width: 0%;
+            background: repeating-linear-gradient(90deg, var(--xp) 0 8px, #5cb80f 8px 16px);
+            transition: width .12s steps(4);
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, .4)
+        }
+
+        #ppct {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--xp);
+            text-shadow: 2px 2px 0 #1e3300
+        }
+
+        #routelog {
+            margin-top: 12px;
+            font-size: 8px;
+            color: #9fbf8f;
+            text-align: left;
+            max-height: 110px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, .75);
+            border: 2px solid #000;
+            padding: 8px;
+            display: none
+        }
+
+        #loadcancel {
+            margin-top: 16px
+        }
+
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 300;
+            background: rgba(12, 14, 10, .95);
+            border: 2px solid #000;
+            box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .2), inset -2px -2px 0 rgba(0, 0, 0, .6), 0 0 0 2px var(--xp);
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 9px;
+            display: none;
+            max-width: 92vw;
+            text-align: center;
+            text-shadow: 1px 1px 0 #000
+        }
+
+        @media(max-width:640px) {
+            nav {
+                width: 100%;
+                justify-content: center
+            }
+
+            header {
+                flex-wrap: wrap
+            }
+
+            main {
+                padding: 10px
+            }
+
+            .splash {
+                margin-left: 40px
+            }
+
+            .vactions {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="panorama"></div>
+    <div id="vignette"></div>
+    <div id="app">
+        <header>
+            <div id="logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 5l6-3 6 3-6 3z' fill='%235dbb3f'/%3E%3Cpath d='M2 5v6l6 3V8z' fill='%2379553a'/%3E%3Cpath d='M14 5v6l-6 3V8z' fill='%235e422c'/%3E%3C/svg%3E" alt="">CRACKED<b>CRAFT</b></div>
+            <nav>
+                <div class="tab on" data-v="play">Play</div>
+                <div class="tab" data-v="versions">Versions <span id="navcount"></span></div>
+                <div class="tab" data-v="profiles">Profiles</div>
+                <div class="tab" data-v="servers">Servers</div>
+                <div class="tab" data-v="settings">Settings</div>
+            </nav>
+        </header>
+        <main>
+            <section class="view on" id="v-play">
+                <div id="playhero">
+                    <div id="mctitle"><span class="l1">CRACKED</span><span class="l2">CRAFT</span></div>
+                    <div><span class="splash" id="splash"></span></div>
+                    <div class="hearts" id="hearts"></div>
+                    <div><button class="mcbtn green" id="bigplay">&#9654; PLAY</button></div>
+                    <div id="launchinfo"></div>
+                    <div id="hotbar"></div>
+                    <div class="statgrid">
+                        <div class="stat"><b id="st-total">0</b><span>Catalog entries</span></div>
+                        <div class="stat"><b id="st-cached">0</b><span>Installed offline</span></div>
+                        <div class="stat"><b id="st-size">0 MB</b><span>Disk used</span></div>
+                        <div class="stat"><b id="st-launches">0</b><span>Total launches</span></div>
+                    </div>
+                </div>
+                <div class="panel" style="margin-top:26px">
+                    <h2>&#9874; Quick Launch</h2>
+                    <div class="row">
+                        <div class="grow"><label>Profile</label><select class="mcinput" id="quick-profile"></select></div>
+                        <div class="grow"><label>Version / Client</label><select class="mcinput" id="quick-version"></select></div>
+                        <div style="align-self:flex-end"><button class="mcbtn sm" id="quick-save">Save to profile</button></div>
+                    </div>
+                </div>
+            </section>
+            <section class="view" id="v-versions">
+                <div class="panel">
+                    <h2>&#9874; Version Manager</h2>
+                    <div class="row">
+                        <div class="grow"><input type="text" class="mcinput" id="vsearch" placeholder="Search 60+ versions & clients..."></div>
+                        <button class="mcbtn sm gold" id="importbtn">Import .html</button>
+                        <input type="file" id="importfile" accept=".html,.htm" style="display:none">
+                    </div>
+                    <div class="chips" id="groupchips"></div>
+                    <p style="color:var(--dim);font-size:8px;margin-top:10px">Install = download once, cached in IndexedDB, plays with zero internet. LIVE = streams from host (needs net, bypasses CORS blocks). WASM = faster on Chrome/Edge.</p>
+                </div>
+                <div id="vlist"></div>
+            </section>
+            <section class="view" id="v-profiles">
+                <div class="panel">
+                    <h2>&#9874; Profiles</h2>
+                    <div class="row">
+                        <div class="grow"><label>Username (cracked - anything)</label><input type="text" class="mcinput" id="p-name" maxlength="16" placeholder="Notch"></div>
+                        <div class="grow"><label>Version / Client</label><select class="mcinput" id="p-ver"></select></div>
+                        <div style="align-self:flex-end"><button class="mcbtn green sm" id="p-add">Add profile</button></div>
+                    </div>
+                </div>
+                <div id="plist"></div>
+            </section>
+            <section class="view" id="v-servers">
+                <div class="panel">
+                    <h2>&#9874; Saved Servers</h2>
+                    <div class="row">
+                        <div class="grow"><label>Name</label><input type="text" class="mcinput" id="s-name" placeholder="My SMP"></div>
+                        <div class="grow"><label>Address (wss:// or java://ip on 1.8.8 Wisp)</label><input type="text" class="mcinput" id="s-addr" placeholder="wss://server.example.com"></div>
+                        <div style="align-self:flex-end"><button class="mcbtn green sm" id="s-add">Add</button></div>
+                    </div>
+                </div>
+                <div id="slist"></div>
+            </section>
+            <section class="view" id="v-settings">
+                <div class="panel">
+                    <h2>&#9874; Settings</h2>
+                    <div class="setrow">
+                        <div class="lbl"><b>Fullscreen on launch</b><small>Request fullscreen when the game starts</small></div>
+                        <div class="toggle" data-k="fullscreen"></div>
+                    </div>
+                    <div class="setrow">
+                        <div class="lbl"><b>Prefer WASM</b><small>Auto-pick WASM twin of a version on Play</small></div>
+                        <div class="toggle" data-k="preferWasm"></div>
+                    </div>
+                    <div class="setrow">
+                        <div class="lbl"><b>Panic key (Esc x3)</b><small>Triple-tap Escape closes the game instantly</small></div>
+                        <div class="toggle" data-k="panic"></div>
+                    </div>
+                    <div class="setrow">
+                        <div class="lbl"><b>Force LIVE mode</b><small>Skip downloads - always stream (fixes ALL network errors)</small></div>
+                        <div class="toggle" data-k="forceLive"></div>
+                    </div>
+                    <div class="setrow">
+                        <div class="lbl"><b>Panorama scroll</b><small>Animated dirt background like the MC title screen</small></div>
+                        <div class="toggle" data-k="panorama"></div>
+                    </div>
+                    <div class="setrow">
+                        <div class="lbl"><b>Tab cloak while playing</b><small>Rename the browser tab during gameplay</small></div>
+                        <div class="grow" style="max-width:220px"><input type="text" class="mcinput" id="cloak" placeholder="Google Docs"></div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h2>&#9874; Storage</h2>
+                    <div class="setrow">
+                        <div class="lbl"><b id="storage-lbl">Installed: 0</b><small>Cached in IndexedDB on this device</small></div><button class="mcbtn red sm" id="wipe">Delete ALL clients</button>
+                    </div>
+                    <div class="setrow">
+                        <div class="lbl"><b>Trash</b><small>Deleted profiles & servers land here</small></div>
+                        <div class="row"><button class="mcbtn sm" id="trash-open">Open Trash (<span id="trash-n">0</span>)</button><button class="mcbtn red sm" id="trash-clear">Clear</button></div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h2>&#9874; About</h2>
+                    <p style="font-size:8px;color:var(--dim)">CrackedCraft v3.0 - single-file launcher, assets embedded base64 (pixel font OFL, procedural textures). 66 builds from eaglercraft.net CDN, eaglercraft.dev, eaglercdn.ir, client.eaglercraft.win, q13x & Eaglercraft-Archive. Clients by lax1dude, PeytonPlayz585 & community. Not affiliated with Mojang/Microsoft.</p>
+                </div>
+            </section>
+        </main>
+        <footer><span>CrackedCraft v3.0 - fully embedded assets</span><span id="foot-user"></span></footer>
+    </div>
+    <div id="game">
+        <div id="gbar"><b id="gtitle">CrackedCraft</b>
+            <button class="mcbtn sm" id="g-reload">Reload</button>
+            <button class="mcbtn sm" id="g-full">Fullscreen</button>
+            <button class="mcbtn sm blue" id="g-open">New Tab</button>
+            <button class="mcbtn sm red" id="g-exit">X Quit</button>
+        </div>
+        <iframe id="gframe" allow="fullscreen;autoplay;gamepad;pointer-lock;clipboard-read;clipboard-write" allowfullscreen></iframe>
+    </div>
+    <div id="loader">
+        <div id="loadbox">
+            <h3 id="loadtitle">Building terrain...</h3>
+            <div id="loadstatus"></div>
+            <div id="pbar">
+                <div id="pfill"></div>
+            </div>
+            <div id="ppct">0%</div>
+            <div id="routelog"></div>
+            <button class="mcbtn red sm" id="loadcancel">Cancel</button>
+        </div>
+    </div>
+    <div id="overlay">
+        <div id="modal"></div>
+    </div>
+    <div id="toast"></div>
+    <script>
+        "use strict";
+        /* ===== EMBEDDED ICONS (procedural pixel-art, base64) ===== */
+        const ICO = {
+            grass: "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",
+            stone: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAHdElEQVR42tVX2a6q2Batb6QXkO4VkFbaX1DEDpVG/dNxh/vh7l0PlVTqnjrJNTHiAplzjm7hH3/8P7+G/o73vsNvL7wcbnjuZ5xY/PHocO4WPPbPf7+Rw/mN93OP5/OO/XmPpb/i0S84PK9Yjgeuv3G6HX5tI0v3xP51wrQ8MIxPjLcrzsczOhadpwHj9YXuMONxHNBPD+yJxnMYcHtN/1sjz7FDd5nQ7a+cesT1fsNuvOH4OmDan3Dtz7jfef444r5c0D8WXB433M8913qczztMzyMu193Xub9d+PZ6YuhnvN57jMudRe44TG/cWbQ7jTgeBrz2B+yePT5aeO06nF539O8Lp75hOrDBccJ07dDz2st0xLw7Yb7x+t38141c3x0uMye8nbEsM4b3Ga8TpzzzxxOn310wXU543UbcbhTe4YzpNOA0vdjEhPftTSru/H7E4z2guxOZ7ohjTwSI4LvndbxPvyzod7s/N7JpIzxOJ+xY4DqfyeEFy6PHnsWe8wMzhdbPMyk4sljPm054HRbshxnzMuGw7HE+XbCnFsZlh24kSvMLM9fGecHEe86XBaexx4NNjkOHlS19N5HkG0RFhCyqOdkdE0V2fMy4Dw+qmtPcdhiWEePujoE3vs4dDucDNcKixw//F9zZ5PycMHSftQfP7fDmcfeiYC8H/nbgUBcoooeVrEIX1Z8N5GiTHHUbIyt8ZIGPHTs/zRPO4wHvx4TlPuNKSobTGz0FuSe0HXl/HPeEm+dY6LqnRtjQSLpuw4KBVr2eSCuLW5IL3dOw8gRIugTFEr8bKP0ceRqijUpsmwh5FKCtWkRti+fuife5w27fk+cD7iOhf3O6hRrglGM3Y+G7mzjt5YwTs2Kc7vx+haixkKnDUAS4IhuQNbiGB8Nx4PD4vw3kYQM/rxG2NbIyQRKGLJ6hiFpkmwJp06D0Y+wmCutKHm+kggrf0e/3A7Vz5cQdHfPscCPMoi5DNBSsdBueqWFtC7DYjGg7UAwXoqLCtc0fDeQZC6fImxKbOEaYtGjSGtu6QpSkCOMtwm2KIkvgVyUe8wn3y4A9p37SXvPMBCTfK8uCYxsQFBG260KQLHicdiWvoCgeZIdNCGxMNKDo3ncD1WaDMG+RlBlS30deZ9imDdo0ZcEcgZ+gqUJkaYWC68GWn0RqdyX0pwmaQW6dFXRDhquuOJ34xbHGYrYoQrUcmLIElWionkN0LKxN57uBeOMjzEIU1YZNFMhZLGgSFHWCbUF6qhRlUCKouU4Uwm2BbBvwncEQJAgrFnYs6LYLxVUhfOA3TThrCZ5mQV3ZkKgBU7UhSzokTSZCPxtII1R1ig3dkGW8OYvUaYyU63lC+D/IUJDppkbAZj/0FEHO7wE0crv2VDi6AHmtQVybtJpGm2kQTBtr1WBBEa4rwZYtKJIKi9owDPu7gSAvUFU+iqREmfio4gqbsCQCMSI/QFQSHVo0KnLE/Aw3JRraNgoamKIFibBbmguVhSw2Y61lKCs2I5qQCb9BXaxswu54cFQBAqdfOT8R+IgvjEhBgbBu0QYsGm7RhrRjGcEPSU3UII8pyCJDTOjrKENLmnRvBXNNvlVCrZuwVB2yJ34Vk3UW/byVNUyJRVURhkdbmgLElfLDBVWFtmDRJqXgAvicdNPSfhRglBRoYjZBOuoN7ZmVyHhNUX+cEkOgyARL/bq5LGhQbA2eZ1NshN4g9IIFm+p3iJKsryDKJunRYbOR7wYShhB9nqUJp0tQ0nIlvd/SEVWaU5ghYoaTT7fEjGz/Q0tAQYYFNFpNJtyaLEKUDLiyAlkzYJJ/XVjTGUTD9BhAAmyBuSCvGUoam/sRxZVPC+afyRtsmhhNwQCKWZiWizl1s9miIO9lWPGaBHlGxOISaR19ic5TaDOV6cYJFdprxcjV6QRlxXNrokP76cx/mY5QFIOa0Nmw/N1ARvHVzP+SdmuZiD75Lf2UwkyRxhvU1ZaJWCEtiVLVoPY/DWzhlw1kwqmphJ3CcyhEj1N7nN7RKEZPxprndQaUSLvaNhFhKBkWNyTrhwgTchwmDdKIbqjJe0P+P1xXRMNnJJOGLSmpCHmUMw8o0Iga8RlQkkHRKSuozhrKx/OkQXPZEEUny+SaYnNdasHh54pOEVSYjsv9YP3nZ4KK4RNzJ/SDLQXYoCHnSRVhy71g23woqrCtMgTMioKu2XKvaEmHS1FpJqNVogWZfhbTUCDHLrddS5GgiQ5Uwi/aXF8rMHQDqi3+9ZPRlvAGLBgQ8pLJ59OGDRMypOUinvN9Hid8fmi4bTOQVJGTf8Tn6PS98AW1ZbAIpzbXDqOZoqQObJf7hG7+/WfDPAuw9ZmEnxguP4LL4dP/H1qCPKIdGxTcRS2NnDKMHE2nHR1IjN8VOdY9Ey7FqGlUPNPwHz8dF0XJ5wTmA3WxKbhlRxQfw6glEgF1o+nkWeY2q3Pij/AkokBUHFf69X9USloyY0aEbYmYMV1wt1Sp8vUHem6vrsgIZsr96/+QElp10zAb6BR57TJ+6X1F+P3/Eesk4FYr/f7Cv/L1H07gX/XUjCkvAAAAAElFTkSuQmCC",
+            gold: "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",
+            diamond: "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",
+            redstone: "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",
+            ender: "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",
+            creeper: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWUlEQVR42oWTyVriUBCF8wz99aqfRQaVOeFmICEgQUAIDwQKEoSIzOMr/l1bzcLFXVXVqXuG0uxNFbUwae4UxvaOwSpHa/ZAd1VlsNap73zUzEJdDerHOzqnNOZJoc9dKhcfzVmZ9G4luueyNHgEn1mGiwz6RMeKbPyTRTgv83QpESyqBLHCvhXojHycrY3WnTqEH1WGG0X1YGHt6gRRnuqrTrjTMRYeRtxAjfICViZ8S9HeuuhLh0DmtGFkYI/zVF4ztNcprDhPO8rSHfu4H0XUzae+rBB+lXi+mnTW0nc2cGKL3uERrRbneJpX+fvvz7en7yzczyId0acb1RL19sc93rSA9rLwZWM+0WDvPJxZAXNf5vmQSdTdo9C9KbRG9EhfeP1sGOzS9LdFgkmZ2peXqKv3O5qXBlr7q0xLuCR+cE0TbkTM8yP6uJGo997uhbpo0BkZtGJR9q2AinxaK4/+uJgY6E/qVFYWwbWEfsphRyZPslzTVwVeLneEYxc1Fv/FPv3qJACCeRHnvYD/lqU1cugtxd7NvQAsKrRFsNbSks1mYvDn8ycNKmLvcO0RRhkRURQeHG3Cm0F/af8KMBgVGFwzVOR1VnVJ4lxRO6eFlxJOzq8A3raEty5jLCWAsQD0pmW6G5dgbwhi9ltz82DQ2HwPkTvz6a5dans5gdhEC+UGnNsDtVGO5rmENVV4EqDmSa4wdgTExPpUDG51ntfi/VHsFQF7txSNmeTA3jm87NNYV7FGgF7kDsytQ+eaYhjdizuSxjhNT2hWX3MM5ik8AeztC1REj/9GRPtlHsvvEgAAAABJRU5ErkJggg==",
+            heart: "iVBORw0KGgoAAAANSUhEUgAAAAkAAAAICAYAAAArzdW1AAAAOElEQVR42mNgAII7Ghr/QZgBCaCIgRj/KyrAGCYIUwBXiC6ADROnCJvxGArQHYpTATaFDPgANgUAh7dlQV51dlUAAAAASUVORK5CYII=",
+            heart_empty: "iVBORw0KGgoAAAANSUhEUgAAAAkAAAAICAYAAAArzdW1AAAAMklEQVR42mNgAAIbEZH/IMyABFDEYBxkQQwxdAFsmDhF2IzHUIDuUJwKsClkwAewKQAAsxk/y/0SR9YAAAAASUVORK5CYII="
+        };
+        const GROUP_ICON = {
+            Modern: "diamond",
+            Release: "grass",
+            Beta: "gold",
+            Historic: "ender",
+            Clients: "redstone",
+            Modpacks: "stone",
+            Custom: "creeper"
+        };
+        const durl = k => "data:image/png;base64," + ICO[k];
+        /* ===== CATALOG — 66 entries, sources verified live Nov 2026 ===== */
+        const DEV = "https://eaglercraft.dev/downloads/",
+            DEVC = "https://eaglercraft.dev/clients/";
+        const CDN = "https://cdn.eaglercraft.net/objects/dl/",
+            IR = "https://eaglercdn.ir/storage/offline/";
+        const WIN = "https://client.eaglercraft.win/eagler-files/",
+            ARC = "https://eaglercraft-archive.github.io/";
+        const Q13 = "https://eaglercraft.q13x.com/";
+        let _id = 0;
+
+        function E(name, ver, type, group, desc, src, kind, mirror, broken) {
+            return {
+                id: "v" + (_id++),
+                name,
+                ver,
+                type,
+                group,
+                desc,
+                src,
+                kind: kind || "zip",
+                mirror: mirror || null,
+                broken: !!broken
+            }
+        }
+        const CATALOG = [
+            E("Eaglercraft 26.3", "26.3", "js", "Modern", "Newest zeus build - skins - 57 MB", CDN + "26.3/eaglercraft26-3-6eda6918.zip", "zip"),
+            E("Eaglercraft 26.2", "26.2", "js", "Modern", "Zeus build - skins - 56 MB", CDN + "26.2/eaglercraft26-2-6eda6918.zip", "zip"),
+            E("Vanilla 1.12.2 (WASM)", "1.12.2", "wasm", "Modern", "Fast modern port - recommended", DEV + "eaglercraft.dev_Vanilla_1.12.2_WASM.html", "html", CDN + "1.12.2/eaglercraft1-12-wasm-62da5f39.zip"),
+            E("Vanilla 1.12.2 (JS)", "1.12.2", "js", "Modern", "Runs anywhere - slower", DEV + "eaglercraft.dev_Vanilla_1.12.2_JS.html", "html", CDN + "1.12.2/eaglercraft1-12-62da5f39.zip"),
+            E("Vanilla 1.8.8 (WASM)", "1.8.8", "wasm", "Release", "The classic - most stable - best servers", DEV + "eaglercraft.dev_Vanilla_1.8.8_WASM.html", "html", CDN + "1.8.8/eaglercraft1-8-wasm-62da5f39.zip"),
+            E("Vanilla 1.8.8 (JS)", "1.8.8", "js", "Release", "JS fallback build", DEV + "eaglercraft.dev_Vanilla_1.8.8_JS.html", "html", CDN + "1.8.8/eaglercraft1-8-62da5f39.zip"),
+            E("Vanilla 1.6.4", "1.6.4", "js", "Release", "Horses era - unstable upstream", DEV + "eaglercraft.dev_Vanilla_1.6.4_JS [ BROKEN ].html", "html", IR + "Eaglercraft_IR_1.6.4.zip", true),
+            E("Vanilla 1.5.2", "1.5.2", "js", "Release", "The original Eaglercraft by lax1dude", DEV + "eaglercraft.dev_Vanilla_1.5.2_JS.html", "html", CDN + "1.5.2/Eaglercraft_1.5.2-sp2.01_Offline.zip"),
+            E("Vanilla 1.2.5 (WASM)", "1.2.5", "wasm", "Release", "Jungles & ocelots - WASM speed", DEV + "eaglercraft.dev_Vanilla_1.2.5_WASM.html", "html", IR + "Eaglercraft_IR_1.2.5.zip"),
+            E("Beta 1.8.1 (WASM)", "b1.8.1", "wasm", "Beta", "Adventure update beta", DEV + "eaglercraft.dev_Beta_1.8.1_WASM.html", "html"),
+            E("Beta 1.8.1 (JS)", "b1.8.1", "js", "Beta", "Adventure update beta", DEV + "eaglercraft.dev_Beta_1.8.1_JS.html", "html"),
+            E("Beta 1.7.3", "b1.7.3", "js", "Beta", "Golden age - pistons", DEV + "eaglercraft.dev_Beta_1.7.3_JS.html", "html", IR + "Eaglercraft_IR_beta1.7.3.zip"),
+            E("Beta 1.6 (WASM)", "b1.6", "wasm", "Beta", "Maps & Nether in multiplayer", DEV + "eaglercraft.dev_Beta_1.6_WASM.html", "html"),
+            E("Beta 1.4", "b1.4", "js", "Beta", "Wolves & cookies", DEVC + "Beta%201.4%20JS/index.html", "live"),
+            E("Beta 1.3", "b1.3", "js", "Beta", "Beds & repeaters", DEV + "eaglercraft.dev_Beta_1.3_JS.html", "html", IR + "Eaglercraft_IR_beta1.3.zip"),
+            E("Beta 1.2", "b1.2", "js", "Beta", "Note blocks & lapis", DEVC + "Beta%201.2%20JS/index.html", "live"),
+            E("Beta 1.1", "b1.1", "js", "Beta", "Ancient beta - broken upstream", DEV + "eaglercraft.dev_Beta_1.1_JS [ BROKEN ].html", "html", IR + "Eaglercraft_IR_beta1.1.zip", true),
+            E("Alpha 1.2.6 (WASM)", "a1.2.6", "wasm", "Historic", "Halloween update alpha", DEV + "eaglercraft.dev_Alpha_1.2.6_WASM.html", "html", IR + "Eaglercraft_IR_alpha1.2.6.zip"),
+            E("Alpha 1.2.6 (JS)", "a1.2.6", "js", "Historic", "Halloween update alpha", DEV + "eaglercraft.dev_Alpha_1.2.6_JS.html", "html"),
+            E("Alpha 1.0.16 (WASM)", "a1.0.16", "wasm", "Historic", "Deep-cut early alpha", DEV + "eaglercraft.dev_Alpha_1.0.16_WASM.html", "html"),
+            E("Indev 20100223 (WASM)", "indev", "wasm", "Historic", "Feb 2010 indev snapshot", DEV + "eaglercraft.dev_Indev_20100223_WASM.html", "html"),
+            E("Indev 20100223 (JS)", "indev", "js", "Historic", "Feb 2010 indev snapshot", DEV + "eaglercraft.dev_Indev_20100223_JS.html", "html"),
+            E("Infdev 20100630", "infdev", "js", "Historic", "Infinite world era - tiny & fast", WIN + "infdev/Infdev-20100630-1.html", "html"),
+            E("Classic 0.30 (WASM)", "c0.30", "wasm", "Historic", "Creative classic - 3.6 MB instant", DEV + "eaglercraft.dev_Classic_0.30_WASM.html", "html", IR + "Eaglercraft_IR_c0.30wasm.zip"),
+            E("Resent Client 5.0 (WASM)", "1.8.8", "wasm", "Clients", "PvP/QoL flagship - Lunar-like", DEV + "eaglercraft.dev_Resent_Client_5.0_WASM.html", "html", IR + "custom/Eaglercraft_IR_resent.zip"),
+            E("Resent Client 5.0 (JS)", "1.8.8", "js", "Clients", "PvP/QoL flagship", DEV + "eaglercraft.dev_Resent_Client_5.0_JS.html", "html"),
+            E("Resent Client 4.0", "1.8.8", "js", "Clients", "Previous gen Resent", DEV + "eaglercraft.dev_Resent_Client_4.0_JS.html", "html"),
+            E("Resent 3.8 Patch 0", "1.8.8", "js", "Clients", "Archived classic Resent", ARC + "Resent-3.8_Patch-0-offline/Resent_3.8_Patch-0_Offline_US.html", "html", "https://api.github.com/repos/Eaglercraft-Archive/Resent-3.8_Patch-0-offline/contents/Resent_3.8_Patch-0_Offline_US.html"),
+            E("PixelClient 3 - 1.8.8 (WASM)", "1.8.8", "wasm", "Clients", "Newest Pixel gen", DEV + "eaglercraft.dev_PixelClient_3_1.8.8_WASM.html", "html"),
+            E("PixelClient 3 - 1.8.8 (JS)", "1.8.8", "js", "Clients", "Newest Pixel gen", DEV + "eaglercraft.dev_PixelClient_3_1.8.8_JS.html", "html"),
+            E("PixelClient 3 - 1.12.2 (WASM)", "1.12.2", "wasm", "Clients", "Newest Pixel gen", DEV + "eaglercraft.dev_PixelClient_3_1.12.2_WASM.html", "html"),
+            E("PixelClient 3 - 1.12.2 (JS)", "1.12.2", "js", "Clients", "Newest Pixel gen", DEV + "eaglercraft.dev_PixelClient_3_1.12.2_JS.html", "html"),
+            E("PixelClient 2 - 1.8.8 (WASM)", "1.8.8", "wasm", "Clients", "Pixel gen 2", DEV + "eaglercraft.dev_PixelClient_2_1.8.8_WASM.html", "html", IR + "custom/Eaglercraft_IR_p1.8.8wasm.zip"),
+            E("PixelClient 2 - 1.12.2 (WASM)", "1.12.2", "wasm", "Clients", "Pixel gen 2", DEV + "eaglercraft.dev_PixelClient_2_1.12.2_WASM.html", "html", IR + "custom/Eaglercraft_IR_p1.12.2wasm.zip"),
+            E("Tuff Client (WASM)", "1.12.2", "wasm", "Clients", "Feature-stacked flagship", DEV + "eaglercraft.dev_Tuff_Client_WASM.html", "html", IR + "custom/Eaglercraft_IR_tf1.12.2wasm.zip"),
+            E("Tuff Client (JS)", "1.12.2", "js", "Clients", "Feature-stacked flagship", DEV + "eaglercraft.dev_Tuff_Client_JS.html", "html"),
+            E("Tuff Beta 1.1UT15 (WASM)", "1.12.2", "wasm", "Clients", "Tuff beta branch", DEV + "eaglercraft.dev_Tuff_Client_Beta_1.1UT15_WASM.html", "html"),
+            E("Tuff Beta 1.1UT15 (JS)", "1.12.2", "js", "Clients", "Tuff beta branch", DEV + "eaglercraft.dev_Tuff_Client_Beta_1.1UT15_JS.html", "html"),
+            E("Astra Client 1.6.0 (WASM)", "1.8.8", "wasm", "Clients", "Big modded client - 56 MB", DEV + "eaglercraft.dev_Astra_Client_1.6.0_WASM.html", "html", IR + "custom/Eaglercraft_IR_ASTRACLIENT_1.6.0wasm.zip"),
+            E("Astra Client 1.6.0 (JS)", "1.8.8", "js", "Clients", "Big modded client - 67 MB", DEV + "eaglercraft.dev_Astra_Client_1.6.0_JS.html", "html"),
+            E("ShadowNet Client (WASM)", "1.12.2", "wasm", "Clients", "Dark-themed 1.12 client", DEV + "eaglercraft.dev_ShadowNetClient_WASM.html", "html"),
+            E("ShadowNet Client (JS)", "1.12.2", "js", "Clients", "Dark-themed 1.12 client", DEV + "eaglercraft.dev_ShadowNetClient_JS.html", "html"),
+            E("Shadow Client", "1.8.8", "js", "Clients", "Community 1.8 client", WIN + "1.8/Shadow_Client_en_US.html", "html"),
+            E("Starlike Client 0.4.2", "1.8.8", "js", "Clients", "Community favorite", DEV + "eaglercraft.dev_Starlike_Client_0.4.2_JS.html", "html", IR + "custom/Eaglercraft_IR_StarLikeClient_0.4.2.zip"),
+            E("Zeta Client a0.0.1", "1.8.8", "js", "Clients", "Early Zeta build", DEV + "eaglercraft.dev_Eaglercraft_Zeta_Client_a0.0.1_JS.html", "html"),
+            E("EaglyMC 1.20 (WASM)", "1.8.8", "wasm", "Clients", "Modern-UI reskin - real 1.8.8 core", DEVC + "EaglyMC%201.20%20WASM/index.html", "live"),
+            E("EaglyMC 1.20 (JS)", "1.8.8", "js", "Clients", "Modern-UI reskin - real 1.8.8 core", DEVC + "EaglyMC%201.20%20JS/index.html", "live"),
+            E("Kone Client", "1.8.8", "js", "Clients", "Archive-rescued 1.8 client", ARC + "Koneclient-1.8-web/", "live"),
+            E("Precision Client Beta 2", "1.5.2", "js", "Clients", "Old-school PvP precision", WIN + "1.5.2/PrecisionBeta.html", "html", DEVC + "Precision%20Client%20Beta%202%20JS/index.html"),
+            E("Prism Client", "1.8.8", "js", "Clients", "Community modded client", WIN + "modded/1.8/prism-client.html", "html"),
+            E("EaglerForge", "1.8.8", "js", "Clients", "Mod loader injected build", WIN + "modded/1.8/EaglerForge/index.html", "live"),
+            E("UwU Client b2", "1.8.8", "js", "Clients", "From the Eaglercraft-Archive ruins", ARC + "UwU-client-b2-offline/UwU-client-b2-offline.html", "html"),
+            E("DragonX Client", "1.8.8", "js", "Clients", "Archive-rescued DragonX", ARC + "dragonx-offline/Dragonx-Offline-latest.html", "html", "https://api.github.com/repos/Eaglercraft-Archive/dragonx-offline/contents/Dragonx-Offline-latest.html"),
+            E("EaglerReborn Beta 1.0", "1.8.8", "js", "Clients", "Reborn project - archived build", ARC + "Eagler-Reborn-compiled-beta-1.0/EaglercraftX_1.8_Offline_en_US.html", "html"),
+            E("ayunCraft", "1.5.2", "js", "Clients", "Legendary ancient client", ARC + "ayuncraft-web/", "live"),
+            E("PBR Shaders Build", "1.8.8", "js", "Clients", "Experimental PBR shader fork", ARC + "Eaglercraft-PBR-shaders/", "live"),
+            E("Winston Horror", "1.5.2", "js", "Clients", "Spooky horror client", DEV + "eaglercraft.dev_Winston_Horror_Client_JS.html", "html", IR + "custom/Eaglercraft_IR_winstonhorror.zip"),
+            E("Z-Client 1.11", "1.11", "js", "Clients", "Community client", IR + "custom/Eaglercraft_IR_z1.11.zip", "zip"),
+            E("Modpack Ultimate (WASM)", "1.6.4", "wasm", "Modpacks", "100+ mods - beefy PC needed", DEV + "eaglercraft.dev_Eaglercraft_1.6.4_Modpack_Ultimate_WASM.html", "html", Q13 + "eagler-modpack-snapshot/ultimate/wasm/"),
+            E("Modpack Ultimate (JS)", "1.6.4", "js", "Modpacks", "100+ mods", DEV + "eaglercraft.dev_Eaglercraft_1.6.4_Modpack_Ultimate_JS.html", "html", Q13 + "eagler-modpack-snapshot/ultimate/js/"),
+            E("Modpack Lite (WASM)", "1.6.4", "wasm", "Modpacks", "Lighter mod loadout", Q13 + "eagler-modpack-snapshot/lite/wasm/", "live"),
+            E("Modpack Tech (WASM)", "1.6.4", "wasm", "Modpacks", "Industrial tech mods", Q13 + "eagler-modpack-snapshot/tech/wasm/", "live"),
+            E("Modpack Magic (WASM)", "1.6.4", "wasm", "Modpacks", "Magic mods focus", Q13 + "eagler-modpack-snapshot/magic/wasm/", "live"),
+            E("Modpack Explore (WASM)", "1.6.4", "wasm", "Modpacks", "Worldgen & exploration", Q13 + "eagler-modpack-snapshot/explore/wasm/", "live"),
+            E("Modpack Skyfactory (WASM)", "1.6.4", "wasm", "Modpacks", "Skyblock factory grind", Q13 + "eagler-modpack-snapshot/skyfactory/wasm/", "live"),
+            E("Modpack Vanilla+ (WASM)", "1.6.4", "wasm", "Modpacks", "Vanilla with extras", Q13 + "eagler-modpack-snapshot/vanilla/wasm/", "live")
+        ];
+        const SPLASHES = ["Also try Eaglercraft!", "60+ builds deep!", "From the ruins!", "Now with pixel font!", "100% embedded assets!", "WASM goes brrr", "No account needed!", "Offline ready!", "Beta 1.7.3 supremacy", "NetworkError? Never heard of her.", "Nativefier me!", "ayunCraft lives!", "As seen on Chromebook!"];
+        /* ===== STATE ===== */
+        const LS = k => {
+            try {
+                return JSON.parse(localStorage.getItem("cc_" + k))
+            } catch (e) {
+                return null
+            }
+        };
+        const SV = (k, v) => localStorage.setItem("cc_" + k, JSON.stringify(v));
+        let customs = LS("customs") || [];
+        let profiles = LS("profiles") || [{
+            name: "Steve",
+            ver: null
+        }];
+        let servers = LS("servers") || [];
+        let trash = LS("trash") || [];
+        let settings = Object.assign({
+            fullscreen: true,
+            preferWasm: true,
+            panic: true,
+            forceLive: false,
+            panorama: true,
+            cloak: ""
+        }, LS("settings") || {});
+        let launches = LS("launches") || 0;
+        let activeProfile = LS("active") || 0;
+        if (activeProfile >= profiles.length) activeProfile = 0;
+        if (!profiles[0].ver) profiles[0].ver = CATALOG.find(v => v.name.includes("1.8.8 (WASM)")).id;
+        const saveAll = () => {
+            SV("profiles", profiles);
+            SV("servers", servers);
+            SV("trash", trash);
+            SV("settings", settings);
+            SV("launches", launches);
+            SV("active", activeProfile);
+            SV("customs", customs)
+        };
+        /* ===== INDEXEDDB ===== */
+        let db;
+        const dbReady = new Promise((res, rej) => {
+            const r = indexedDB.open("crackedcraft", 1);
+            r.onupgradeneeded = e => e.target.result.createObjectStore("clients", {
+                keyPath: "id"
+            });
+            r.onsuccess = e => {
+                db = e.target.result;
+                res()
+            };
+            r.onerror = () => rej(r.error)
+        });
+        const idb = (mode, fn) => dbReady.then(() => new Promise((res, rej) => {
+            const t = db.transaction("clients", mode),
+                s = t.objectStore("clients");
+            const q = fn(s);
+            t.oncomplete = () => res(q && q.result);
+            t.onerror = () => rej(t.error)
+        }));
+        const dbPut = r => idb("readwrite", s => s.put(r));
+        const dbGet = id => idb("readonly", s => s.get(id));
+        const dbDel = id => idb("readwrite", s => s.delete(id));
+        const dbAll = () => idb("readonly", s => s.getAll());
+        /* ===== HELPERS ===== */
+        const $ = s => document.querySelector(s),
+            $$ = s => [...document.querySelectorAll(s)];
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        } [c]));
+        const toast = (m, t = 2800) => {
+            const e = $("#toast");
+            e.textContent = m;
+            e.style.display = "block";
+            clearTimeout(e._t);
+            e._t = setTimeout(() => e.style.display = "none", t)
+        };
+        const mb = b => (b / 1048576).toFixed(1) + " MB";
+
+        function modal(h) {
+            $("#modal").innerHTML = h;
+            $("#overlay").classList.add("on")
+        }
+
+        function closeModal() {
+            $("#overlay").classList.remove("on")
+        }
+        $("#overlay").addEventListener("click", e => {
+            if (e.target.id === "overlay") closeModal()
+        });
+        window.closeModal = closeModal;
+
+        function confirmBox(title, msg, onYes) {
+            modal('<h3>' + esc(title) + '</h3><p style="font-size:9px;color:#5a5a5a">' + esc(msg) + '</p><div class="mbtns"><button class="mcbtn sm" onclick="closeModal()">Cancel</button><button class="mcbtn red sm" id="cf-yes">Confirm</button></div>');
+            $("#cf-yes").onclick = () => {
+                closeModal();
+                onYes()
+            }
+        }
+        const allVersions = () => CATALOG.concat(customs);
+        const findVer = id => allVersions().find(v => v.id === id);
+        const vicon = v => durl(GROUP_ICON[v.group] || "stone");
+        /* ===== ZIP READER ===== */
+        async function unzip(buf) {
+            const u8 = new Uint8Array(buf),
+                dv = new DataView(buf);
+            let eo = -1;
+            for (let i = u8.length - 22; i >= Math.max(0, u8.length - 65558); i--) {
+                if (dv.getUint32(i, true) === 0x06054b50) {
+                    eo = i;
+                    break
+                }
+            }
+            if (eo < 0) throw new Error("Not a valid zip");
+            const n = dv.getUint16(eo + 10, true);
+            let p = dv.getUint32(eo + 16, true);
+            const files = [];
+            for (let k = 0; k < n; k++) {
+                if (dv.getUint32(p, true) !== 0x02014b50) break;
+                const method = dv.getUint16(p + 10, true),
+                    csize = dv.getUint32(p + 20, true),
+                    nl = dv.getUint16(p + 28, true),
+                    el = dv.getUint16(p + 30, true),
+                    cl = dv.getUint16(p + 32, true),
+                    lo = dv.getUint32(p + 42, true);
+                const name = new TextDecoder().decode(u8.subarray(p + 46, p + 46 + nl));
+                files.push({
+                    name,
+                    method,
+                    csize,
+                    lo
+                });
+                p += 46 + nl + el + cl;
+            }
+            const out = [];
+            for (const f of files) {
+                if (f.name.endsWith("/") || f.name.includes("__MACOSX")) continue;
+                const lnl = dv.getUint16(f.lo + 26, true),
+                    lel = dv.getUint16(f.lo + 28, true),
+                    start = f.lo + 30 + lnl + lel;
+                const raw = u8.subarray(start, start + f.csize);
+                let data;
+                if (f.method === 0) data = raw.slice();
+                else if (f.method === 8) {
+                    if (typeof DecompressionStream === "undefined") throw new Error("Browser too old for deflate - use Chrome/Edge/Firefox");
+                    data = new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).arrayBuffer());
+                } else throw new Error("Unsupported zip compression " + f.method);
+                out.push({
+                    name: f.name,
+                    data
+                });
+            }
+            return out;
+        }
+
+        function pickHtml(files) {
+            const hs = files.filter(f => /\.html?$/i.test(f.name) && !/read.?me/i.test(f.name));
+            if (!hs.length) throw new Error("No HTML inside zip");
+            hs.sort((a, b) => b.data.length - a.data.length);
+            return hs[0]
+        }
+        /* ===== MIRROR CASCADE ===== */
+        let abortCtl = null;
+
+        function loader(on, title) {
+            $("#loader").classList.toggle("on", on);
+            if (title) $("#loadtitle").textContent = title;
+            if (on) {
+                $("#routelog").innerHTML = "";
+                $("#routelog").style.display = "none"
+            }
+        }
+
+        function prog(p, s) {
+            $("#pfill").style.width = Math.min(100, p) + "%";
+            $("#ppct").textContent = Math.floor(Math.min(100, p)) + "%";
+            if (s != null) $("#loadstatus").textContent = s
+        }
+
+        function rlog(msg, ok) {
+            const el = $("#routelog");
+            el.style.display = "block";
+            el.innerHTML += (ok ? "[OK] " : "[X] ") + esc(msg) + "<br>";
+            el.scrollTop = el.scrollHeight
+        }
+
+        function routesFor(url) {
+            const r = [url];
+            if (url.startsWith("https://cdn.eaglercraft.net/objects/")) {
+                r.push(url.replace("https://cdn.eaglercraft.net/objects/", "https://cdn.eaglercraft.ru/"));
+                const path = url.replace("https://cdn.eaglercraft.net/objects/", "");
+                if (/^(dl|builds)\//.test(path)) r.push("https://eaglercraft.com/api/cdn/" + path);
+            }
+            if (url.startsWith("https://api.github.com/")) r.push(url.replace("api.github.com/repos/", "raw.githubusercontent.com/").replace("/contents/", "/main/"));
+            return r;
+        }
+        async function fetchAny(urls, label) {
+            abortCtl = new AbortController();
+            const seen = new Set();
+            let lastErr = null;
+            for (const base of urls.filter(Boolean)) {
+                for (const u of routesFor(base)) {
+                    if (seen.has(u)) continue;
+                    seen.add(u);
+                    const host = u.split("/")[2];
+                    try {
+                        prog(0, "Trying " + host + " ...");
+                        const headers = u.startsWith("https://api.github.com/") ? {
+                            "Accept": "application/vnd.github.raw"
+                        } : {};
+                        const resp = await fetch(u, {
+                            signal: abortCtl.signal,
+                            headers
+                        });
+                        if (!resp.ok) throw new Error("HTTP " + resp.status);
+                        const total = +resp.headers.get("Content-Length") || 0;
+                        let buf;
+                        if (resp.body && resp.body.getReader) {
+                            const rd = resp.body.getReader(),
+                                chunks = [];
+                            let got = 0;
+                            const t0 = performance.now();
+                            for (;;) {
+                                const {
+                                    done,
+                                    value
+                                } = await rd.read();
+                                if (done) break;
+                                chunks.push(value);
+                                got += value.length;
+                                prog(total ? got / total * 80 : Math.min(76, got / 2e5), label + " " + mb(got) + (total ? " / " + mb(total) : "") + " - " + mb(got / Math.max(.001, (performance.now() - t0) / 1000)) + "/s via " + host)
+                            }
+                            buf = new Uint8Array(got);
+                            let o = 0;
+                            for (const c of chunks) {
+                                buf.set(c, o);
+                                o += c.length
+                            }
+                            buf = buf.buffer;
+                        } else buf = await resp.arrayBuffer();
+                        rlog(host + " - OK (" + mb(buf.byteLength) + ")", true);
+                        return buf;
+                    } catch (e) {
+                        if (e.name === "AbortError") throw e;
+                        lastErr = e;
+                        rlog(host + " - " + e.message, false);
+                    }
+                }
+            }
+            throw lastErr || new Error("All routes failed");
+        }
+        /* ===== INSTALL / LAUNCH ===== */
+        async function installVersion(v) {
+            if (await dbGet(v.id)) return true;
+            if (v.kind === "live") {
+                toast("LIVE client - streams from host, no install needed");
+                return false
+            }
+            loader(true, "Downloading " + v.name);
+            prog(0, "Connecting...");
+            try {
+                const buf = await fetchAny([v.src, v.mirror], "Downloading");
+                prog(84, "Extracting...");
+                let html, size;
+                if (v.kind === "zip" || /\.zip($|\?)/i.test(v.src)) {
+                    const files = await unzip(buf);
+                    const main = pickHtml(files);
+                    html = new TextDecoder().decode(main.data);
+                    size = main.data.length;
+                } else {
+                    html = new TextDecoder().decode(buf);
+                    size = buf.byteLength
+                }
+                prog(92, "Writing to storage...");
+                await dbPut({
+                    id: v.id,
+                    name: v.name,
+                    html,
+                    size,
+                    installed: Date.now()
+                });
+                prog(100, "Done!");
+                setTimeout(() => loader(false), 250);
+                toast(v.name + " installed - plays offline now");
+                renderAll();
+                return true;
+            } catch (e) {
+                loader(false);
+                throw e
+            }
+        }
+        let currentBlobUrl = null,
+            escTimes = [],
+            lastGameSrc = null;
+
+        function openGame(src, title, isBlob) {
+            if (currentBlobUrl) {
+                URL.revokeObjectURL(currentBlobUrl);
+                currentBlobUrl = null
+            }
+            if (isBlob) currentBlobUrl = src;
+            lastGameSrc = {
+                src,
+                isBlob
+            };
+            $("#gframe").src = src;
+            $("#gtitle").textContent = title;
+            $("#game").classList.add("on");
+            if (settings.cloak) document.title = settings.cloak;
+            launches++;
+            saveAll();
+            renderStats();
+            setTimeout(() => {
+                loader(false);
+                if (settings.fullscreen) goFull()
+            }, 300);
+        }
+
+        function preferredTwin(v) {
+            if (!settings.preferWasm || v.type === "wasm") return v;
+            const twin = allVersions().find(x => x !== v && x.group === v.group && x.ver === v.ver && x.type === "wasm" && x.name.replace(" (JS)", "") === v.name.replace(" (JS)", ""));
+            return twin || v;
+        }
+        async function launch(verId, profileName) {
+            let v = findVer(verId);
+            if (!v) {
+                toast("Version not found");
+                return
+            }
+            v = preferredTwin(v);
+            try {
+                if (v.kind === "live" || (settings.forceLive && v.kind !== "local")) {
+                    const liveUrl = v.kind === "live" ? v.src : (typeof v.mirror === "string" && /^https/.test(v.mirror) && !/\.zip$/.test(v.mirror) ? v.mirror : null);
+                    if (liveUrl) {
+                        loader(true, "Launching LIVE - " + v.name);
+                        prog(70, "Streaming from host...");
+                        openGame(liveUrl, v.name + (profileName ? " - " + profileName : ""), false);
+                        return
+                    }
+                    if (v.kind === "live") {
+                        toast("This entry is live-only");
+                        return
+                    }
+                }
+                let rec = await dbGet(v.id);
+                if (!rec) {
+                    try {
+                        await installVersion(v);
+                        rec = await dbGet(v.id)
+                    } catch (e) {
+                        if (e.name === "AbortError") return;
+                        const fb = [v.src, v.mirror].find(u => u && !/\.zip($|\?)/i.test(u) && !u.startsWith("https://api.github.com/"));
+                        if (fb) {
+                            toast("Download blocked - switching to LIVE mode", 3200);
+                            loader(true, "Network fallback - LIVE launch");
+                            prog(70, "Streaming directly (no download)...");
+                            openGame(fb, v.name + " [LIVE]" + (profileName ? " - " + profileName : ""), false);
+                            return
+                        }
+                        throw e;
+                    }
+                }
+                if (!rec) return;
+                loader(true, "Launching " + v.name);
+                prog(60, "Injecting username...");
+                let html = rec.html;
+                if (profileName) {
+                    const seed = String.fromCharCode(60) + 'script>try{localStorage.setItem("eaglercraftX.username",' + JSON.stringify(profileName) + ');localStorage.setItem("username",' + JSON.stringify(profileName) + ');}catch(e){}' + String.fromCharCode(60) + '/script>';
+                    html = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, m => m + seed) : seed + html;
+                }
+                prog(90, "Starting engine...");
+                openGame(URL.createObjectURL(new Blob([html], {
+                    type: "text/html"
+                })), v.name + (profileName ? " - " + profileName : ""), true);
+            } catch (e) {
+                loader(false);
+                if (e.name !== "AbortError") toast("Launch failed: " + e.message, 4200)
+            }
+        }
+
+        function goFull() {
+            const g = $("#game");
+            try {
+                const p = g.requestFullscreen ? g.requestFullscreen() : g.webkitRequestFullscreen ? g.webkitRequestFullscreen() : null;
+                if (p && p.catch) p.catch(() => {})
+            } catch (e) {}
+        }
+
+        function quitGame() {
+            $("#game").classList.remove("on");
+            $("#gframe").src = "about:blank";
+            if (currentBlobUrl) {
+                URL.revokeObjectURL(currentBlobUrl);
+                currentBlobUrl = null
+            }
+            lastGameSrc = null;
+            document.title = "CrackedCraft Launcher";
+            if (document.fullscreenElement) document.exitFullscreen().catch(() => {})
+        }
+        $("#g-exit").onclick = quitGame;
+        $("#g-full").onclick = goFull;
+        $("#g-reload").onclick = () => {
+            if (lastGameSrc) $("#gframe").src = lastGameSrc.src
+        };
+        $("#g-open").onclick = () => {
+            if (lastGameSrc) window.open(lastGameSrc.src, "_blank")
+        };
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape" && settings.panic && $("#game").classList.contains("on")) {
+                const n = Date.now();
+                escTimes = escTimes.filter(t => n - t < 900);
+                escTimes.push(n);
+                if (escTimes.length >= 3) {
+                    escTimes = [];
+                    quitGame()
+                }
+            }
+        });
+        $("#loadcancel").onclick = () => {
+            if (abortCtl) abortCtl.abort();
+            loader(false)
+        };
+        /* ===== RENDER ===== */
+        let groupFilter = "All";
+
+        function verOptions(sel) {
+            const groups = {};
+            allVersions().forEach(v => {
+                (groups[v.group] = groups[v.group] || []).push(v)
+            });
+            sel.innerHTML = Object.entries(groups).map(([g, vs]) => '<optgroup label="' + esc(g) + '">' + vs.map(v => '<option value="' + v.id + '">' + esc(v.name) + (v.kind === "live" ? " [LIVE]" : "") + '</option>').join("") + "</optgroup>").join("");
+        }
+        async function renderVersions() {
+            const cache = await dbAll();
+            const ids = new Set(cache.map(c => c.id));
+            const q = ($("#vsearch").value || "").toLowerCase();
+            const groups = {};
+            allVersions().filter(v => (groupFilter === "All" || v.group === groupFilter) && (!q || (v.name + " " + v.ver + " " + v.desc).toLowerCase().includes(q))).forEach(v => {
+                (groups[v.group] = groups[v.group] || []).push(v)
+            });
+            $("#vlist").innerHTML = Object.entries(groups).map(([g, vs]) => '<div class="vgroup"><h3>' + esc(g) + ' <small>' + vs.length + '</small></h3>' + vs.map(v => {
+                const inst = ids.has(v.id);
+                const rec = cache.find(c => c.id === v.id);
+                return '<div class="vcard"><img class="vico" src="' + vicon(v) + '" alt=""><div class="vmeta"><b>' + esc(v.name) + '</b><span class="badge ' + (v.type === "wasm" ? "b-wasm" : "b-js") + '">' + v.type + '</span>' + (v.kind === "live" ? '<span class="badge b-live">Live</span>' : "") + (inst ? '<span class="badge b-ok">Installed' + (rec ? " " + mb(rec.size) : "") + "</span>" : "") + (v.broken ? '<span class="badge b-broken">Unstable</span>' : "") + (v.custom ? '<span class="badge b-local">Local</span>' : "") + '<small>' + esc(v.desc) + '</small></div><div class="vactions"><button class="mcbtn green sm" data-launch="' + v.id + '">&#9654; Play</button>' + (v.kind === "live" ? '<button class="mcbtn blue sm" data-src="' + esc(v.src) + '">Source</button>' : inst ? '<button class="mcbtn red sm" data-del="' + v.id + '">Uninstall</button>' : '<button class="mcbtn sm" data-dl="' + v.id + '">Install</button>') + '</div></div>'
+            }).join("") + "</div>").join("") || '<div class="panel">No matches.</div>';
+            $$("#vlist [data-launch]").forEach(b => b.onclick = () => launch(b.dataset.launch, profiles[activeProfile]?.name));
+            $$("#vlist [data-dl]").forEach(b => b.onclick = () => installVersion(findVer(b.dataset.dl)).catch(e => {
+                if (e.name !== "AbortError") toast("Install failed: " + e.message + " - try Play (auto-LIVE fallback)", 4500)
+            }));
+            $$("#vlist [data-del]").forEach(b => b.onclick = () => confirmBox("Uninstall", "Remove this client from offline storage?", async () => {
+                await dbDel(b.dataset.del);
+                const ci = customs.findIndex(c => c.id === b.dataset.del);
+                if (ci >= 0) {
+                    customs.splice(ci, 1);
+                    SV("customs", customs)
+                }
+                toast("Uninstalled");
+                renderAll()
+            }));
+            $$("#vlist [data-src]").forEach(b => b.onclick = () => window.open(b.dataset.src, "_blank"));
+        }
+
+        function renderChips() {
+            const gs = ["All", ...new Set(allVersions().map(v => v.group))];
+            $("#groupchips").innerHTML = gs.map(g => '<div class="chip ' + (g === groupFilter ? "on" : "") + '" data-g="' + g + '">' + g + '</div>').join("");
+            $$("#groupchips .chip").forEach(c => c.onclick = () => {
+                groupFilter = c.dataset.g;
+                renderChips();
+                renderVersions()
+            });
+        }
+
+        function renderHotbar() {
+            $("#hotbar").innerHTML = profiles.slice(0, 9).map((p, i) => {
+                const v = findVer(p.ver);
+                return '<div class="hslot ' + (i === activeProfile ? "sel" : "") + '" data-h="' + i + '" title="' + esc(p.name) + '"><img src="' + (v ? vicon(v) : durl("creeper")) + '" alt=""><span class="hname">' + esc(p.name) + '</span></div>'
+            }).join("");
+            $$("#hotbar .hslot").forEach(h => h.onclick = () => {
+                activeProfile = +h.dataset.h;
+                saveAll();
+                renderAll();
+                toast("Selected " + profiles[activeProfile].name)
+            });
+        }
+
+        function renderHearts() {
+            $("#hearts").innerHTML = Array.from({
+                length: 9
+            }, (_, i) => '<img src="' + durl(i < 9 - (launches % 10) ? "heart" : "heart_empty") + '" alt="">').join("");
+        }
+
+        function renderProfiles() {
+            verOptions($("#p-ver"));
+            $("#plist").innerHTML = profiles.map((p, i) => {
+                const v = findVer(p.ver);
+                return '<div class="item" ' + (i === activeProfile ? 'style="box-shadow:inset 0 0 0 2px var(--xp)"' : "") + '><img src="' + (v ? vicon(v) : durl("creeper")) + '" style="width:28px;height:28px" alt=""><div class="grow"><b>' + esc(p.name) + '</b><small>' + esc(v ? v.name : "Unknown version") + (i === activeProfile ? " - ACTIVE" : "") + '</small></div><button class="mcbtn green sm" data-pl="' + i + '">Play</button>' + (i !== activeProfile ? '<button class="mcbtn sm" data-pa="' + i + '">Set active</button>' : "") + '<button class="mcbtn sm" data-pe="' + i + '">Edit</button><button class="mcbtn red sm" data-pd="' + i + '">Delete</button></div>'
+            }).join("") || '<div class="panel">No profiles yet.</div>';
+            $$("#plist [data-pl]").forEach(b => b.onclick = () => {
+                activeProfile = +b.dataset.pl;
+                saveAll();
+                launch(profiles[activeProfile].ver, profiles[activeProfile].name)
+            });
+            $$("#plist [data-pa]").forEach(b => b.onclick = () => {
+                activeProfile = +b.dataset.pa;
+                saveAll();
+                renderAll()
+            });
+            $$("#plist [data-pe]").forEach(b => b.onclick = () => {
+                const i = +b.dataset.pe,
+                    p = profiles[i];
+                modal('<h3>Edit profile</h3><div class="mrow"><label>Username</label><input type="text" class="mcinput" id="e-name" maxlength="16" value="' + esc(p.name) + '"></div><div class="mrow"><label>Version</label><select class="mcinput" id="e-ver"></select></div><div class="mbtns"><button class="mcbtn sm" onclick="closeModal()">Cancel</button><button class="mcbtn green sm" id="e-save">Save</button></div>');
+                verOptions($("#e-ver"));
+                $("#e-ver").value = p.ver;
+                $("#e-save").onclick = () => {
+                    const n = $("#e-name").value.trim();
+                    if (!n) return toast("Username required");
+                    profiles[i] = {
+                        name: n,
+                        ver: $("#e-ver").value
+                    };
+                    saveAll();
+                    closeModal();
+                    renderAll()
+                }
+            });
+            $$("#plist [data-pd]").forEach(b => b.onclick = () => {
+                const i = +b.dataset.pd;
+                if (profiles.length === 1) return toast("Keep at least one profile");
+                trash.push({
+                    kind: "profile",
+                    data: profiles[i],
+                    at: Date.now()
+                });
+                profiles.splice(i, 1);
+                if (activeProfile >= profiles.length) activeProfile = 0;
+                saveAll();
+                renderAll();
+                toast("Moved to Trash")
+            });
+        }
+
+        function renderServers() {
+            $("#slist").innerHTML = servers.map((s, i) => '<div class="item"><div class="grow"><b>' + esc(s.name) + '</b><small>' + esc(s.addr) + '</small></div><button class="mcbtn sm" data-sc="' + i + '">Copy IP</button><button class="mcbtn red sm" data-sd="' + i + '">Delete</button></div>').join("") || '<div class="panel">No servers saved. Add one above.</div>';
+            $$("#slist [data-sc]").forEach(b => b.onclick = async () => {
+                try {
+                    await navigator.clipboard.writeText(servers[+b.dataset.sc].addr);
+                    toast("Copied - paste in Multiplayer")
+                } catch (e) {
+                    toast("Copy blocked - select manually")
+                }
+            });
+            $$("#slist [data-sd]").forEach(b => b.onclick = () => {
+                const i = +b.dataset.sd;
+                trash.push({
+                    kind: "server",
+                    data: servers[i],
+                    at: Date.now()
+                });
+                servers.splice(i, 1);
+                saveAll();
+                renderAll();
+                toast("Moved to Trash")
+            });
+        }
+        async function renderStats() {
+            const cache = await dbAll();
+            $("#st-total").textContent = allVersions().length;
+            $("#navcount").textContent = "(" + allVersions().length + ")";
+            $("#st-cached").textContent = cache.length;
+            $("#st-size").textContent = mb(cache.reduce((a, c) => a + (c.size || 0), 0));
+            $("#st-launches").textContent = launches;
+            $("#storage-lbl").textContent = "Installed: " + cache.length + " (" + mb(cache.reduce((a, c) => a + (c.size || 0), 0)) + ")";
+            $("#trash-n").textContent = trash.length;
+            renderHearts();
+        }
+
+        function renderQuick() {
+            verOptions($("#quick-version"));
+            $("#quick-profile").innerHTML = profiles.map((p, i) => '<option value="' + i + '" ' + (i === activeProfile ? "selected" : "") + '>' + esc(p.name) + '</option>').join("");
+            const p = profiles[activeProfile];
+            if (p && findVer(p.ver)) $("#quick-version").value = p.ver;
+            $("#launchinfo").textContent = p ? "Playing as " + p.name + " on " + (findVer(p.ver)?.name || "?") : "";
+            $("#foot-user").textContent = p ? "Logged in as " + p.name + " (cracked)" : "";
+        }
+
+        function renderSettings() {
+            $$(".toggle").forEach(t => {
+                t.classList.toggle("on", !!settings[t.dataset.k]);
+                t.onclick = () => {
+                    settings[t.dataset.k] = !settings[t.dataset.k];
+                    t.classList.toggle("on", settings[t.dataset.k]);
+                    saveAll();
+                    if (t.dataset.k === "panorama") $("#panorama").style.animationPlayState = settings.panorama ? "running" : "paused";
+                    if (t.dataset.k === "forceLive") toast(settings.forceLive ? "LIVE mode forced - downloads skipped" : "Normal mode - offline installs enabled")
+                }
+            });
+            $("#cloak").value = settings.cloak || "";
+            $("#panorama").style.animationPlayState = settings.panorama ? "running" : "paused";
+        }
+
+        function renderAll() {
+            renderVersions();
+            renderChips();
+            renderHotbar();
+            renderProfiles();
+            renderServers();
+            renderStats();
+            renderQuick();
+            renderSettings()
+        }
+        /* ===== EVENTS ===== */
+        $$(".tab").forEach(t => t.onclick = () => {
+            $$(".tab").forEach(x => x.classList.remove("on"));
+            t.classList.add("on");
+            $$(".view").forEach(v => v.classList.remove("on"));
+            $("#v-" + t.dataset.v).classList.add("on")
+        });
+        $("#bigplay").onclick = () => {
+            const pi = +$("#quick-profile").value;
+            activeProfile = pi;
+            saveAll();
+            launch($("#quick-version").value, profiles[pi].name)
+        };
+        $("#quick-profile").onchange = e => {
+            activeProfile = +e.target.value;
+            saveAll();
+            renderQuick();
+            renderHotbar();
+            const p = profiles[activeProfile];
+            if (findVer(p.ver)) $("#quick-version").value = p.ver
+        };
+        $("#quick-save").onclick = () => {
+            profiles[activeProfile].ver = $("#quick-version").value;
+            saveAll();
+            renderAll();
+            toast("Profile updated")
+        };
+        $("#vsearch").oninput = renderVersions;
+        $("#p-add").onclick = () => {
+            const n = $("#p-name").value.trim();
+            if (!n) return toast("Enter a username first");
+            profiles.push({
+                name: n,
+                ver: $("#p-ver").value
+            });
+            $("#p-name").value = "";
+            saveAll();
+            renderAll();
+            toast("Profile added")
+        };
+        $("#s-add").onclick = () => {
+            const n = $("#s-name").value.trim(),
+                a = $("#s-addr").value.trim();
+            if (!n || !a) return toast("Name + address required");
+            servers.push({
+                name: n,
+                addr: a
+            });
+            $("#s-name").value = "";
+            $("#s-addr").value = "";
+            saveAll();
+            renderAll();
+            toast("Server saved")
+        };
+        $("#cloak").onchange = e => {
+            settings.cloak = e.target.value.trim();
+            saveAll();
+            toast("Cloak title saved")
+        };
+        $("#wipe").onclick = () => confirmBox("Delete ALL clients", "Every installed client removed from offline storage. Profiles stay.", async () => {
+            const all = await dbAll();
+            for (const c of all) await dbDel(c.id);
+            customs = [];
+            SV("customs", customs);
+            renderAll();
+            toast("All clients deleted")
+        });
+        $("#trash-open").onclick = () => {
+            modal('<h3>Trash (' + trash.length + ')</h3>' + (trash.length ? trash.map((t, i) => '<div class="item"><div class="grow"><b>' + esc(t.data.name) + '</b><small>' + t.kind + ' - ' + new Date(t.at).toLocaleDateString() + '</small></div><button class="mcbtn sm" data-tr="' + i + '">Restore</button></div>').join("") : '<p style="font-size:9px;color:#5a5a5a">Empty.</p>') + '<div class="mbtns"><button class="mcbtn sm" onclick="closeModal()">Close</button></div>');
+            $$("#modal [data-tr]").forEach(b => b.onclick = () => {
+                const t = trash.splice(+b.dataset.tr, 1)[0];
+                (t.kind === "profile" ? profiles : servers).push(t.data);
+                saveAll();
+                closeModal();
+                renderAll();
+                toast("Restored")
+            });
+        };
+        $("#trash-clear").onclick = () => confirmBox("Clear Trash", "Permanently delete everything in Trash?", () => {
+            trash = [];
+            saveAll();
+            renderAll();
+            toast("Trash cleared")
+        });
+        $("#importbtn").onclick = () => $("#importfile").click();
+        $("#importfile").onchange = async e => {
+            const f = e.target.files[0];
+            if (!f) return;
+            const html = await f.text();
+            const id = "custom-" + Date.now();
+            const v = {
+                id,
+                name: f.name.replace(/\.html?$/i, ""),
+                ver: "custom",
+                type: "js",
+                group: "Custom",
+                desc: "Imported local client",
+                src: null,
+                mirror: null,
+                kind: "local",
+                custom: true
+            };
+            customs.push(v);
+            SV("customs", customs);
+            await dbPut({
+                id,
+                name: v.name,
+                html,
+                size: new Blob([html]).size,
+                installed: Date.now()
+            });
+            e.target.value = "";
+            toast("Imported " + v.name);
+            renderAll();
+        };
+        /* ===== BOOT ===== */
+        $("#splash").textContent = SPLASHES[Math.floor(Math.random() * SPLASHES.length)];
+        dbReady.then(renderAll).catch(() => {
+            toast("IndexedDB unavailable - private mode? LIVE mode still works", 5000);
+            renderAll()
+        });
+    </script>
+</body>
+
+</html>
